@@ -1,0 +1,7 @@
+api/.env
+indexer/.env
+
+api/node_modules
+indexer/node_modules
+
+TODO

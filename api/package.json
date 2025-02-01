@@ -1,0 +1,30 @@
+{
+  "name": "eth-exchange-api",
+  "version": "1.0.0",
+  "description": "\"Users can deposit/withdraw their ETH and stake, bet or trade with it.\"",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node dist/index.js",
+    "dev": "nodemon --watch src --exec \"tsc && node dist/index.js\""
+  },
+  "author": "Arav Bhivgade",
+  "license": "MIT",
+  "dependencies": {
+    "@solana/web3.js": "^1.98.0",
+    "bcryptjs": "^2.4.3",
+    "bip39": "^3.1.0",
+    "bs58": "^6.0.0",
+    "dotenv": "^16.4.7",
+    "ed25519-hd-key": "^1.3.0",
+    "express": "^4.21.2",
+    "mongoose": "^8.9.6",
+    "tweetnacl": "^1.0.3"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/express": "^5.0.0",
+    "nodemon": "^3.1.9",
+    "typescript": "^5.7.3"
+  }
+}
