@@ -11,15 +11,14 @@
   "author": "Arav Bhivgade",
   "license": "MIT",
   "dependencies": {
-    "@solana/web3.js": "^1.98.0",
+    "@types/bcrypt": "^5.0.2",
+    "bcrypt": "^5.1.1",
     "bcryptjs": "^2.4.3",
     "bip39": "^3.1.0",
-    "bs58": "^6.0.0",
     "dotenv": "^16.4.7",
-    "ed25519-hd-key": "^1.3.0",
+    "ethers": "^6.13.5",
     "express": "^4.21.2",
-    "mongoose": "^8.9.6",
-    "tweetnacl": "^1.0.3"
+    "mongoose": "^8.9.6"
   },
   "devDependencies": {
     "@types/bcryptjs": "^2.4.6",
