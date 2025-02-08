@@ -54,3 +54,30 @@ export const signup = async (req: Request, res: Response): Promise<void> => {
         await prisma.$disconnect();
     }
 };
+
+export const getDepositAddress = async (req: Request, res: Response): Promise<void> => {
+    try {
+        const { email } = req.body;
+
+        const user = await prisma.user.findUnique({
+            where: { email: email },
+            include: {
+                mainWallet: true
+            }
+        });
+
+        if (!user) {
+            res.status(404).json({ error: 'User not found' });
+            return;
+        }
+
+        res.status(200).json({
+            message: 'Main wallet public key fetched successfully',
+            publicKey: user.mainWallet.publicKey
+        });
+    } catch (error: any) {
+        res.status(500).json({ error: 'Failed to fetch main wallet public key', details: error.message });
+    } finally {
+        await prisma.$disconnect();
+    }
+};
