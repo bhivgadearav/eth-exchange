@@ -1,7 +1,9 @@
 api/.env
 indexer/.env
+api/dist
 
 api/node_modules
 indexer/node_modules
+indexer/dist
 
 TODO

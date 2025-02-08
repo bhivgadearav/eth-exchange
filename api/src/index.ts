@@ -1,7 +1,6 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import router from './router';
-import dbConnect from './config/db';
 
 if (process.env.NODE_ENV !== 'production') {
     dotenv.config();
@@ -12,9 +11,6 @@ app.use(express.json());
 app.use('/api', router);
 
 const PORT = parseInt(process.env.PORT || '3000') || 3000;
-
-// Connect to MongoDB
-dbConnect();
 
 app.listen(PORT, '0.0.0.0', () => {
     console.log(`Server is running on port ${PORT}`);
