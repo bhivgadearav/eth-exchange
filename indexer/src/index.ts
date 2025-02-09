@@ -67,7 +67,6 @@ async function main() {
                 Nonce: ${txnDetails.nonce}
                 Data: ${txnDetails.data}
                 Block Number: ${txnDetails.blockNumber}
-                Confirmations: ${txnDetails.confirmations}
             `);
             return;
         }
